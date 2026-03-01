@@ -211,6 +211,14 @@ The repository also includes focused learning-curve scripts used for bootstrap a
 - **`learningcurveASDTDfit.R`**  
   Earlier exploratory script for ASD vs TD learning-curve fitting and bootstrap comparisons.
 
+- **`scripts/run_nlme_learningcurve.R`**  
+  Nonlinear mixed-effects learning-curve models (p0, alpha) by group, fit separately for trials 1–10 and 11–200.  
+  Outputs fixed-effect tests and random-effects variance components.
+
+- **`scripts/run_heterogeneity_deep2.R`**  
+  Extended heterogeneity analysis: mixed-effects random-slope extraction, variance tests, mixture modeling,  
+  and nonlinear mixed-effects fits for trials 1–10 and 11–200.
+
 ## Data Quality and Inclusion Criteria
 
 ### Primary Inclusion Criteria
@@ -405,4 +413,3 @@ bioRxiv 2025.05.06.652509; doi: https://doi.org/10.1101/2025.05.06.652509
 - Check that `alldata` loads correctly
 - Verify group distributions match expected values
 - Confirm inclusion criteria are working as intended
-
