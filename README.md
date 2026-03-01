@@ -195,6 +195,22 @@ The analysis code is organized into several main sections that generate the comp
 - Response time reliability analysis
 - Learning stability assessment
 
+### Additional Learning-Curve Scripts
+
+The repository also includes focused learning-curve scripts used for bootstrap and subgroup analyses:
+
+- **`scripts/run_learningcurve_bootstrap.R`**  
+  Bootstrapped learning-curve analysis for ASD vs TD on the hard phase (trial > 10), fitting  
+  `y = A0 + (P − A0) * (1 − exp(L * trial))`.  
+  Outputs group-level parameter summaries (A0, P, L), KS tests, bootstrap difference CIs/p-values, and permutation tests.
+
+- **`scripts/run_learningcurve_3group_ks.R`**  
+  Three-group bootstrap learning-curve analysis (ASD_high, ASD_low, TD) using the same model and hard-phase trials.  
+  Outputs parameter summaries and pairwise KS tests for A0, P, and L across all group pairs.
+
+- **`learningcurveASDTDfit.R`**  
+  Earlier exploratory script for ASD vs TD learning-curve fitting and bootstrap comparisons.
+
 ## Data Quality and Inclusion Criteria
 
 ### Primary Inclusion Criteria
@@ -389,5 +405,4 @@ bioRxiv 2025.05.06.652509; doi: https://doi.org/10.1101/2025.05.06.652509
 - Check that `alldata` loads correctly
 - Verify group distributions match expected values
 - Confirm inclusion criteria are working as intended
-
 
