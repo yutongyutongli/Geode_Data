@@ -219,6 +219,43 @@ The repository also includes focused learning-curve scripts used for bootstrap a
   Extended heterogeneity analysis: mixed-effects random-slope extraction, variance tests, mixture modeling,  
   and nonlinear mixed-effects fits for trials 1–10 and 11–200.
 
+### Reviewer-Response Statistics Scripts
+
+These scripts were added to compute the effect-size and classifier/correlation statistics requested in peer review, without modifying the main analysis script.
+
+- **`additional_stats_geode.R`**  
+  Computes:
+  - groupwise effect sizes (means, SD, Cohen's d) for key outcomes
+  - ASD-vs-TD classifier metrics (accuracy, F1, macro-F1, balanced accuracy)
+  - pooled vs within-group correlations (e.g., SRS-2/VABS-3 with game metrics)
+  - reviewer-ready summary markdown
+
+  Run:
+  ```bash
+  Rscript additional_stats_geode.R
+  ```
+
+  Outputs:
+  - `results/stats_additional/effect_sizes_binary_groups.csv`
+  - `results/stats_additional/effect_sizes_group_verbal_perf.csv`
+  - `results/stats_additional/classifier_metrics_asd_vs_td.csv`
+  - `results/stats_additional/classifier_metrics_asd_vs_td_multifeature.csv`
+  - `results/stats_additional/pooled_vs_withingroup_correlations.csv`
+  - `results/stats_additional/reviewer_stats_response.md`
+
+- **`scripts/run_scalar_param_stats.R`**  
+  Reproduces scalar SDT pooled-group parameter contrasts for:
+  - `k0`, `k1`, `bs`, `b1`, `b2`
+  and reports ASD-TD differences with 95% CI, z, and p.
+
+  Run:
+  ```bash
+  Rscript scripts/run_scalar_param_stats.R
+  ```
+
+  Outputs:
+  - `results/stats_additional/scalar_sdt_group_param_differences.csv`
+
 ## Data Quality and Inclusion Criteria
 
 ### Primary Inclusion Criteria
